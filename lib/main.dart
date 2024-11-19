@@ -16,6 +16,7 @@ class Bobs extends StatelessWidget {
   Widget build(BuildContext context) => MaterialApp.router (
       routerConfig: router,
       debugShowCheckedModeBanner: Constants.showDebugBanner,
-      theme: BobsTheme.getAppTheme()
+      theme: lightTheme,
+      darkTheme: darkTheme,
     );
 }

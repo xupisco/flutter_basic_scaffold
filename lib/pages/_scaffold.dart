@@ -18,8 +18,8 @@ class BaseScaffold extends StatelessWidget {
         value: SystemUiOverlayStyle(
             statusBarBrightness: Brightness.light,
             statusBarIconBrightness: Brightness.light,
-            statusBarColor: AppColors.primary,
-            systemNavigationBarColor: AppColors.primary),
+            statusBarColor: BobsColors.primary,
+            systemNavigationBarColor: BobsColors.primary),
         child: Scaffold(
           body: navigationShell,
           bottomNavigationBar: Container(
@@ -37,7 +37,7 @@ class BaseScaffold extends StatelessWidget {
               selectedIndex: navigationShell.currentIndex,
               onDestinationSelected: navigationShell.goBranch,
               indicatorColor: Colors.white,
-              backgroundColor: AppColors.primary,
+              backgroundColor: BobsColors.primary,
               destinations: destinations
                   .map((destination) => NavigationDestination(
                         icon: Icon(
@@ -47,7 +47,7 @@ class BaseScaffold extends StatelessWidget {
                         label: destination.label.toUpperCase(),
                         selectedIcon: Icon(
                           destination.icon,
-                          color: AppColors.primary,
+                          color: BobsColors.primary,
                         ),
                       ))
                   .toList(),

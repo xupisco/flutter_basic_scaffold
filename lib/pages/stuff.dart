@@ -6,7 +6,7 @@ class StuffPage extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) => Scaffold(
-    appBar: AppBar(title: const Text('Home')),
+    appBar: AppBar(title: const Text('Stuff')),
     body: Center(
       child: Column(
         mainAxisAlignment: MainAxisAlignment.center,

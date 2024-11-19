@@ -1,27 +1,35 @@
 import 'package:flutter/material.dart';
 
-class AppColors {
+class BobsColors {
   static const primary = Color(0xffc12a21);
 }
 
-class BobsTheme {
-  static ThemeData getAppTheme() {
-    return ThemeData(
-      useMaterial3: true,
+ThemeData lightTheme = ThemeData(
+  colorScheme: ColorScheme.light(
+    brightness: Brightness.light,
+    surface: Colors.grey.shade100,
+    primary: BobsColors.primary
+  ),
 
-      // Colors
-      primaryColor: AppColors.primary,
-      colorScheme: ColorScheme.fromSeed(
-        seedColor: AppColors.primary,
-        contrastLevel: 1,
-      ),
+  navigationBarTheme: NavigationBarThemeData(
+    indicatorColor: Colors.black.withAlpha(60),
+    labelTextStyle:
+        WidgetStateProperty.all(const TextStyle(color: Colors.white)),
+  ),
+);
 
-      // Navigation Bar
-      navigationBarTheme: NavigationBarThemeData(
-          indicatorColor: Colors.black.withAlpha(60),
-          labelTextStyle:
-              WidgetStateProperty.all(const TextStyle(color: Colors.white)),
-        ),
-    );
-  }
-}
+ThemeData darkTheme = ThemeData(
+  appBarTheme: AppBarTheme(color: BobsColors.primary),
+  colorScheme: ColorScheme.dark(
+      brightness: Brightness.dark,
+      surface: Colors.grey.shade900,
+      primary: BobsColors.primary,
+      onPrimary: Colors.white
+  ),
+
+  navigationBarTheme: NavigationBarThemeData(
+    indicatorColor: Colors.black.withAlpha(60),
+    labelTextStyle:
+        WidgetStateProperty.all(const TextStyle(color: Colors.white)),
+  ),
+);
