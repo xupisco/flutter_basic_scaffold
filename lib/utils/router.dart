@@ -10,6 +10,7 @@ import '../pages/delivery.dart';
 import '../pages/extras.dart';
 import '../pages/coupons.dart';
 import '../pages/extras/account.dart';
+import '../pages/extras/account_detail.dart';
 
 
 final _rootNavigatorKey = GlobalKey<NavigatorState>(debugLabel: 'root');
@@ -56,6 +57,12 @@ final router = GoRouter(
                 GoRoute(
                   path: Routes.accountPage,
                   pageBuilder: (context, state) => RouteTransition(child: AccountPage()),
+                  routes: [
+                      GoRoute(
+                        path: Routes.accountDetailPage,
+                        pageBuilder: (context, state) => RouteTransition(child: AccountDetailPage()),
+                      )
+                    ]
                 )
               ]
             )

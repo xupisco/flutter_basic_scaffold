@@ -7,7 +7,7 @@ class RouteTransition extends CustomTransitionPage<void> {
   RouteTransition(
       {super.key, required super.child, String transitionType = 'slide'})
       : super(
-          transitionDuration: const Duration(milliseconds: 250),
+          transitionDuration: const Duration(milliseconds: 500),
           transitionsBuilder: (_, animation, __, child) {
             if (transitionType == 'slide') {
               return SlideTransition(
@@ -16,7 +16,7 @@ class RouteTransition extends CustomTransitionPage<void> {
                     begin: const Offset(1, 0),
                     end: Offset.zero,
                   ).chain(
-                    CurveTween(curve: Curves.ease),
+                    CurveTween(curve: Curves.easeOutExpo),
                   ),
                 ),
                 child: child,

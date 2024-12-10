@@ -5,4 +5,5 @@ class Routes {
   static const String deliveryPage = '/delivery';
   static const String extrasPage = '/extras';
   static const String accountPage = 'account';
+  static const String accountDetailPage = 'detail';
 }

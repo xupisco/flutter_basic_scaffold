@@ -18,7 +18,7 @@ class ExtrasPage extends StatelessWidget {
           const SizedBox(height: 20,),
           FilledButton(
             onPressed: () => context.push('${Routes.extrasPage}/${Routes.accountPage}'),
-            child: const Text("Hi there!")
+            child: const Text("Account")
           ),
         ],
       ),
