@@ -12,8 +12,6 @@ class HomePage extends StatelessWidget {
         mainAxisAlignment: MainAxisAlignment.center,
         children: [
           const Text('Home Page', style: TextStyle(fontSize: 20),),
-          const SizedBox(height: 20,),
-          FilledButton(onPressed: () => {}, child: const Text("Hi there!")),
         ],
       ),
     ),

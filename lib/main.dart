@@ -1,8 +1,8 @@
 import 'package:flutter/material.dart';
 
 import 'utils/constants.dart';
-import 'utils/bobs_theme.dart';
 import 'utils/router.dart';
+import 'ui/theme/bobs_theme.dart';
 
 
 void main() {

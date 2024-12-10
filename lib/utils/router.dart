@@ -1,12 +1,15 @@
-import 'package:bobs_app_v2/pages/search.dart';
-import 'package:bobs_app_v2/pages/settings.dart';
-import 'package:bobs_app_v2/pages/stuff.dart';
 import 'package:flutter/material.dart';
 import 'package:go_router/go_router.dart';
 
+import 'router_animation.dart';
 import '../models/routes.dart';
+
 import '../pages/_scaffold.dart';
 import '../pages/home.dart';
+import '../pages/delivery.dart';
+import '../pages/extras.dart';
+import '../pages/coupons.dart';
+import '../pages/extras/account.dart';
 
 
 final _rootNavigatorKey = GlobalKey<NavigatorState>(debugLabel: 'root');
@@ -31,24 +34,30 @@ final router = GoRouter(
         StatefulShellBranch(
           routes: [
             GoRoute(
-              path: Routes.stuffPage,
-              builder: (context, state) => const StuffPage(),
+              path: Routes.couponsPage,
+              builder: (context, state) => const CouponsPage(),
             )
           ]
         ),
         StatefulShellBranch(
           routes: [
             GoRoute(
-              path: Routes.searchPage,
-              builder: (context, state) => const SearchPage(),
+              path: Routes.deliveryPage,
+              builder: (context, state) => const DeliveryPage(),
             )
           ]
         ),
         StatefulShellBranch(
           routes: [
             GoRoute(
-              path: Routes.settingsPage,
-              builder: (context, state) => const SettingsPage(),
+              path: Routes.extrasPage,
+              builder: (context, state) => const ExtrasPage(),
+              routes: [
+                GoRoute(
+                  path: Routes.accountPage,
+                  pageBuilder: (context, state) => RouteTransition(child: AccountPage()),
+                )
+              ]
             )
           ]
         ),

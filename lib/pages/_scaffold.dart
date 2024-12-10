@@ -2,8 +2,9 @@ import 'package:flutter/material.dart';
 import 'package:flutter/services.dart';
 import 'package:go_router/go_router.dart';
 
-import '../utils/bobs_theme.dart';
+import '../ui/theme/bobs_theme.dart';
 import '../models/destination.dart';
+
 
 class BaseScaffold extends StatelessWidget {
   const BaseScaffold({
